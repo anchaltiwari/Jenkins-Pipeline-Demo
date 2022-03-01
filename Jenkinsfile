@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("init") {
             steps {
-                echo "Building version ${NEW_VERSION}"
+            //    echo "Building version ${NEW_VERSION}"
                // echo "Git Credentials are By Globle env vaiable :  ${NEW_VERSION}"
               //  echo "Git Credentials are By with credentials wrapper :  ${NEW_VERSION}"
                 withCredentials([
