@@ -1,8 +1,8 @@
 def gv
-enviornment {
-        NEW_VERSION = '1.3.0'
-        GIT_CREDENTIALS = 'AnchalGitCred'
-    }
+// enviornment {
+//         NEW_VERSION = '1.3.0'
+//         GIT_CREDENTIALS = 'AnchalGitCred'
+//     }
 pipeline {
     agent any
     
@@ -14,7 +14,7 @@ pipeline {
         stage("init") {
             steps {
                 echo "Building version ${NEW_VERSION}"
-                echo "Git Credentials are By Globle env vaiable :  ${NEW_VERSION}"
+               // echo "Git Credentials are By Globle env vaiable :  ${NEW_VERSION}"
                 echo "Git Credentials are By with credentials wrapper :  ${NEW_VERSION}"
                 withCredentials([
                 usernamePassword(credentials : 'AnchalGitCred', usernameVariable :USER, passwordVariable:PWD )
@@ -53,16 +53,16 @@ pipeline {
                 }
             }
         }
-        post{
-            always{
-                echo 'This Post bolck and we are in Always Block...'
-            }
-            failure{
-                echo 'This Post bolck and we are in failure Block...'
-            }
-            success{
-                echo 'This Post bolck and we are in Success Block...'
-            }
-        }
+//         post{
+//             always{
+//                 echo 'This Post bolck and we are in Always Block...'
+//             }
+//             failure{
+//                 echo 'This Post bolck and we are in failure Block...'
+//             }
+//             success{
+//                 echo 'This Post bolck and we are in Success Block...'
+//             }
+//         }
     }   
 }
