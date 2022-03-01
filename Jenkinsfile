@@ -16,11 +16,11 @@ pipeline {
             //    echo "Building version ${NEW_VERSION}"
                // echo "Git Credentials are By Globle env vaiable :  ${NEW_VERSION}"
               //  echo "Git Credentials are By with credentials wrapper :  ${NEW_VERSION}"
-                withCredentials([
-                usernamePassword(credentials : 'AnchalGitCred', usernameVariable :USER, passwordVariable:PWD )
-                ]) {
-                    echo "User name is ${USER} and password is ${PWD}"
-                }
+//                 withCredentials([
+//                 usernamePassword(credentials : 'AnchalGitCred', usernameVariable :USER, passwordVariable:PWD )
+//                 ]) {
+//                     echo "User name is ${USER} and password is ${PWD}"
+//                 }
 
                 script {
                    gv = load "script.groovy" 
