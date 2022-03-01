@@ -53,20 +53,20 @@ pipeline {
                 }
             }
         }
-        post{
-            stage("After Execution of everythings..."){
-                steps{
-            always{
-                echo 'This Post bolck and we are in Always Block...'
-            }
-            failure{
-                echo 'This Post bolck and we are in failure Block...'
-            }
-            success{
-                echo 'This Post bolck and we are in Success Block...'
-            }
-                }
-            }
-        }
+//         post{
+//             stage("After Execution of everythings..."){
+//                 steps{
+//                  always{
+//                      echo 'This Post bolck and we are in Always Block...'
+//                  }
+//                  failure{
+//                       echo 'This Post bolck and we are in failure Block...'
+//                  }
+//                   success{
+//                       echo 'This Post bolck and we are in Success Block...'
+//                  }
+//                 }
+//             }
+//         }
     }   
 }
